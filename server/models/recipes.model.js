@@ -18,6 +18,7 @@ const RecipeSchema = new mongoose.Schema({
     },
     ingredients: {
         type: String,
+        minLength: [2, "Ingredients must be at least two characters long"],
         required: [true, "Must list ingredients"]
     },
     instructions :{

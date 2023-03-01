@@ -1,0 +1,37 @@
+/*this is imported into Detail.js */
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+.container3 {
+    background-color: rgb(253, 220, 220);
+    padding: 100px;
+}
+
+.back, .edit_link {
+    font-family: 'Paytone One', sans-serif;
+    font-weight: lighter;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.font {
+    font-family: 'Paytone One', sans-serif;
+    font-weight: lighter;
+}
+
+.btn {
+        background-color: #5e5959;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 25px;
+        transition-duration: 0.3s;
+        margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #ce0000;
+    cursor: pointer;
+}

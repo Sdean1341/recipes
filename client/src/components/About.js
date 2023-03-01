@@ -1,10 +1,12 @@
 import React from 'react';
-import './about.css';
 import { Paper } from '@mui/material';
+import '../styles/about.css';
+import { Link } from 'react-router-dom';
 
 const styles = {
     paper: {
-        width: "40rem", padding: "1rem"
+        width: "40rem", padding: "1rem",
+        backgroundColor: "#d9fafb"
     }
 }
 function About() {
@@ -18,6 +20,7 @@ return (
         project. We had a lot of fun creating this personal recipe book and hope you enjoy our site.   -Marquessa and Savannah
         </p>
         </Paper>
+        <Link className='back' to='/recipe/'>Back</Link>
     </div>
 );
 }

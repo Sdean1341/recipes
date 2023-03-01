@@ -1,0 +1,35 @@
+/* this is imported in Main.js */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+.journal {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #d9fafb; 
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.outside {
+    background-color: rgb(253, 220, 220);
+    padding: 30px;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+h1, h2 {
+    font-family: 'Indie Flower';
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.add_link, .about_link {
+    font-family: 'Paytone One', sans-serif;
+}
+
+.by {
+    margin-top: 40px;
+    font-size: large;
+}

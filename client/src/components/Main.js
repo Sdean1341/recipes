@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import RecipeList from './RecipeList';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './main_style.css'
+import '../styles/main_style.css';
 import { Paper } from '@mui/material';
+import { Container } from '@mui/material';
+
 
 const styles = {
     paper: {
@@ -22,16 +24,28 @@ const Main = (props) => {
     }
 
     return (
-        <>
-            <div className='container'>
-            <Link className='about_link' to='/recipe/about'>About this project</Link>
-                <h1>Recipe Book</h1>
+        <div className='outside'>
+            <Container
+            maxWidth="lg"
+            sx={{
+                backgroundColor: "#d9fafb",
+                padding: "2rem",
+                borderRadius: "10px",
+                boxShadow: "5px 5px 5px 5px rgba(0, 0, 0, 0.2)",
+                marginTop: "1rem"
+    }}>
+                <h1>Our Recipe Book</h1>
                     <Paper className='journal' elevation={10} style={styles.paper}>
                         <Link className='add_link' to='/recipe/add'>Add Recipe</Link>
                         <RecipeList recipe={recipe} setRecipe={setRecipe} deleteRecipe={deleteRecipe}/>
                     </Paper>
-            </div>
-        </>
+                <div className='about'>
+                <h2 className='by'>By: Marquessa Macdonald and Savannah Dean</h2>
+                    <Link className='about_link' to='/recipe/about'>About this project</Link>
+                </div>
+            </Container>
+
+        </div>
     )
 }
 

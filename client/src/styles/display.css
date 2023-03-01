@@ -1,0 +1,13 @@
+/* this is imported into RecipeList.js */
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.link, .timestamp {
+    font-family: 'Paytone One', sans-serif;
+    font-weight: light;
+}
+
+.display_title {
+    font-family: 'Indie Flower', cursive;
+    font-size: xx-large;
+}

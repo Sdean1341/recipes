@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
-import './add.css'; //this is using the same one as "add recipe since the styles will be so similar"
 import { Link } from 'react-router-dom';
-
+import '../styles/add.css'
+//this is using the same one as "add recipe since the styles will be so similar"
 
 const Update = (props) => {
     const { id } = useParams();
@@ -49,8 +49,8 @@ const Update = (props) => {
                 })
     }
     return (
-        <div className='name_this_later'>
-            <h1>Update Entry</h1>
+        <div className='container2'>
+            <h1 className='update'>Update Entry</h1>
             <form onSubmit={updatedRecipe}>
             <p>
                 <label className='label'>Recipe Title </label><br/>
@@ -59,40 +59,47 @@ const Update = (props) => {
                 <p>{errors.title.message}</p>
                 : null}
             </p>
+            <div className='middle'>
+            <div className='left'>
             <p>
                 <label className='label'>Skill Level </label><br/>
-                <input className='setting'  type="text" value={skillLevel} onChange = {(e)=>setskillLevel(e.target.value)}/>
+                <input className='box1'  type="text" value={skillLevel} onChange = {(e)=>setskillLevel(e.target.value)}/>
                 {errors.skillLevel ? 
                 <p>{errors.skillLevel.message}</p>
                 : null}
             </p>
             <p>
                 <label className='label'>Amount of time </label><br/>
-                <textarea className='time' type="text" value={time} onChange = {(e)=>setTime(e.target.value)}/>
+                <input className='box1' type="text" value={time} onChange = {(e)=>setTime(e.target.value)}/>
                 {errors.time ? 
                 <p>{errors.time.message}</p>
                 : null}
             </p>
+            </div>
+            <div className='right'>
             <p>
                 <label className='label'>Ingredients</label><br/>
-                <textarea className='ingredients' type="text" value={ingredients} onChange = {(e)=>setIngredients(e.target.value)}/>
+                <textarea className='box' type="text" value={ingredients} onChange = {(e)=>setIngredients(e.target.value)}/>
                 {errors.ingredients ?
                 <p>{errors.ingredients.message}</p>
                 : null}
             </p>
             <p>
                 <label className='label'>Instructions</label><br/>
-                <textarea className='instructions' type="text" value={instructions} onChange = {(e)=>setInstructions(e.target.value)}/>
+                <textarea className='box' type="text" value={instructions} onChange = {(e)=>setInstructions(e.target.value)}/>
                 {errors.instructions ?
                 <p>{errors.instructions.message}</p>
                 : null}
             </p>
+            </div>
+            </div>
             <p>
             <label className='label'>Other comments </label><br/>
-                <textarea className='comments' type="text" placeholder='e.g. vegetarian, gluten-free, etc.' 
+                <textarea className='box' type="text" placeholder='e.g. vegetarian, gluten-free, etc.' 
                 value={otherDetails} onChange = {(e)=>setOtherDetails(e.target.value)}/>
             </p>
-                    <input className='submit1' type="submit" />
+            <Link className='back' to='/recipe/'>Back</Link><br/>
+            <button className='submit' type="submit">Submit</button> 
             </form>
         </div>
     )

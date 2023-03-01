@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 
 const styles = {
     paper: {
-        width: "40rem", padding: "1rem"
+        width: "40rem", padding: "1rem",
+        backgroundColor: "#d9fafb"
     }
 }
 
@@ -42,13 +43,13 @@ const Detail = (props) => {
     return (
         <div className='container3'>
             <h1 className='name_this_later'>{recipe.title}</h1>
-            <h3 className='name_this_later'>Added on: {recipe.createdAt}</h3> 
+            <h3 className='font'>Added on: {new Date(recipe.createdAt).toLocaleString()}</h3> 
             <Paper className='journal' elevation={10} style={styles.paper}>
-            <p className='name_this_later'>Skill Level: {recipe.skillLevel}</p>
-            <p className='name_this_later'>Amount of time: {recipe.time}</p>
-            <p className='name_this_later'>Ingredients: {recipe.ingredients}</p>
-            <p className='name_this_later'>Instructions: {recipe.instructions}</p>
-            <p className='name_this_later'>Other details: {recipe.otherDetails}</p>
+            <p className='font'>Skill Level: {recipe.skillLevel}</p>
+            <p className='font'>Amount of time: {recipe.time}</p>
+            <p className='font'>Ingredients: {recipe.ingredients}</p>
+            <p className='font'>Instructions: {recipe.instructions}</p>
+            <p className='font'>Other details: {recipe.otherDetails}</p>
             <Link className='back' to='/recipe/'>Back</Link>
             <Link className='edit_link' to={`/recipe/edit/${recipe._id}`}> Edit </Link> <br/>
             { !isLoading && <button className='btn' onClick={() => deleteRecipe(recipe._id)}>Delete Entry </button> }

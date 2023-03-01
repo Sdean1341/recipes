@@ -1,0 +1,65 @@
+/* this is being imported into AddRecipe.js and Update.js, since they are so similar */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+.label {
+    font-family: 'Indie Flower', cursive;
+    font-size: xx-large;
+}
+
+.submit {
+    margin-bottom: 30px;
+    background-color: #a123f5;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 25px;
+    transition-duration: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+background-color: #bf72e0;
+cursor: pointer;
+}
+
+
+.box {
+    height: 90px;
+    width: 350px;
+}
+
+.title, .box1 {
+    width: 350px;
+    height: 30px;
+}
+
+.box1 {
+    margin-left: 10px;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    margin-left: 10px;
+}
+
+.update, .new {
+    font-family: 'Indie Flower', cursive;
+    font-size: 50px;
+}
+
+.container2 {
+    background-color: #d9fafb;
+}
